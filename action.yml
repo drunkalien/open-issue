@@ -1,4 +1,4 @@
-name: Open github issue
+name: Open github issue drunkalien
 author: drunkalien
 description: "Opens a github issue"
 inputs:
