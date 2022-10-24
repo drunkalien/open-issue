@@ -1,13 +1,23 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: Open github issue
+author: drunkalien
+description: "Opens a github issue"
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  token:
+    description: "Github token"
     required: true
-    default: '1000'
+  title:
+    description: "Issue title"
+    required: true
+  body:
+    description: "Issue body"
+  assignees:
+    description: "Issue assignees"
 outputs:
-  time: # output will be available to future steps
-    description: 'The current time after waiting'
+  issue:
+    description: "The issue object as a string"
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: "node16"
+  main: "dist/index.js"
+branding:
+  icon: "alert-octagon"
+  color: "purple"
